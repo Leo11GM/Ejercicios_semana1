@@ -1,12 +1,14 @@
 #Diccionario de sinónimos
 diccionario = {
-    "Casa" : "Hogar",
-    "Generosidad" : "Bondad",
-    "Restar" : "Reducir",
-    "Ahorrar" : "Economizar",
-    "Gastar" : "Desembolsar"
+    "casa" : "Hogar",
+    "generosidad" : "Bondad",
+    "restar" : "Reducir",
+    "ahorrar" : "Economizar",
+    "gastar" : "Desembolsar"
 }
-palabra = input("Ingrese una palabra: ")
+
+palabra = input("Ingrese una palabra: ").lower()
+print(palabra)
 if palabra in diccionario:
     print(f"El sinónimo de la palabra {palabra} es: {diccionario[palabra]} ") 
 else :

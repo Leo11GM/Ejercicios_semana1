@@ -44,7 +44,7 @@ else:
         print("Contacto añadido.")   
     else :
         print("Saliendo...")
-borrar = input("¿Desea eliminar algún contacto? ").lower
+borrar = input("¿Desea eliminar algún contacto? ").lower()
 if borrar == "si" :
     contacto_borrar = input("¿Qué contacto desea eliminar? ")
     if contacto_borrar in contactos :
@@ -55,4 +55,3 @@ if borrar == "si" :
         print("Contacto no encontrado, saliendo...")       
 else:
         print("Saliendo...")
-#me cago en todo

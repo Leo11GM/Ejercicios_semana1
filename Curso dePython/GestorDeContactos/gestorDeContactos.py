@@ -8,12 +8,13 @@ contactos = {
 
 # Menú principal
 def menu():
-    print("Menú principal")
-    print("1. Buscar contacto")
-    print("2. Actualizar contacto")
-    print("3. Agregar nuevo contacto")
-    print("4. Eliminar contacto")
-    print("5. Salir")
+    print("***********************************************")
+    print("*       Menú principal")
+    print("*    1. Buscar contacto")
+    print("*    2. Actualizar contacto")
+    print("*    3. Agregar nuevo contacto")
+    print("*    4. Eliminar contacto")
+    print("*    5. Salir")
     opcion = input("¿Qué deseas hacer? (1-5): ")
     return int(opcion)
 

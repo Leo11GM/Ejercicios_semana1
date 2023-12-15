@@ -27,6 +27,7 @@ while True:
         if actualizar == "si":
             nuevo_correo = input("Escriba el correo nuevo: ").lower()
             nuevo_telefono = input("Escriba el teléfono nuevo:")
+            # contactos[buscar]["Correo"] = nuevo_correo
             print("Información actualizada del usuario.")
             print(f"Correo: {nuevo_correo} ")
             print(f"Teléfono: {nuevo_telefono} ")

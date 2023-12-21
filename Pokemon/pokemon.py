@@ -1,19 +1,11 @@
 from random import randint
+import os
 
+def clear_screen():
+    # Clear screen command based on the operating system
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def perform_attack(attacker, defender, attack_name, damage):
-    """
-    Performs an attack on a defender by an attacker.
-
-    Args:
-        attacker (str): The name of the attacker.
-        defender (int): The current HP of the defender.
-        attack_name (str): The name of the attack.
-        damage (int): The amount of damage the attack deals.
-
-    Returns:
-        int: The updated HP of the defender after the attack.
-    """
     print(f"{attacker} uses {attack_name} and deals {damage} damage.")
     defender -= damage
     defender = max(0, defender)  # Ensure that HP doesn't go below 0
@@ -21,26 +13,6 @@ def perform_attack(attacker, defender, attack_name, damage):
     return defender
 
 def get_user_input(prompt, valid_inputs):
-    """
-    Prompt the user for input and validate it against a list of valid inputs.
-
-    Args:
-        prompt (str): The prompt to display to the user.
-        valid_inputs (list): A list of valid inputs.
-
-    Returns:
-        int: The user's input as an integer.
-
-    Raises:
-        ValueError: If the user enters a non-numeric input.
-
-    Example:
-        >>> get_user_input("Enter a number: ", [1, 2, 3])
-        Enter a number: 5
-        Invalid input. Please enter a valid option.
-        Enter a number: 2
-        2
-    """
     while True:
         try:
             user_input = input(prompt)
@@ -54,6 +26,11 @@ def get_user_input(prompt, valid_inputs):
 
         except ValueError:
             print("Invalid input. Please enter a number.")
+
+def display_life_bars(pikachu_hp, charmander_hp):
+    print("\nComparison of Life Bars:")
+    print(f"Pikachu: {'=' * (pikachu_hp // 5)}")
+    print(f"Charmander: {'=' * (charmander_hp // 5)}")
 
 pikachu_hp = 100
 charmander_hp = 100
@@ -70,24 +47,34 @@ while pikachu_hp > 0 and charmander_hp > 0:
     else:
         charmander_hp = perform_attack("Pikachu", charmander_hp, "Quick Attack", 5)
 
+    # Display comparison of life bars
+    display_life_bars(pikachu_hp, charmander_hp)
+
     # Prompt user to continue
     input("Press Enter to continue...")
+    clear_screen()
 
     # Charmander's turn
     print("\nCharmander's turn:")
     print("Choose your move:")
     print("1. Ember")
     print("2. Scratch")
+    print("3. Skip Turn")
 
-    charmander_attack = get_user_input("Enter 1 or 2 (type 'exit' to end the game): ", [1, 2])
+    charmander_attack = get_user_input("Enter 1, 2, or 3 (type 'exit' to end the game): ", [1, 2, 3])
 
     if charmander_attack == 1:
         pikachu_hp = perform_attack("Charmander", pikachu_hp, "Ember", 10)
-    else:
+    elif charmander_attack == 2:
         pikachu_hp = perform_attack("Charmander", pikachu_hp, "Scratch", 5)
 
+    # Display comparison of life bars
+    display_life_bars(pikachu_hp, charmander_hp)
+
     # Prompt user to continue
-    input("Press Enter to continue...")
+    if charmander_attack != 3:
+        input("Press Enter to continue...")
+        clear_screen()
 
 # Check for the winner
 if pikachu_hp <= 0:

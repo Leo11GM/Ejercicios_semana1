@@ -11,12 +11,15 @@ my_position = [3, 1]
 tail_length = 0
 tail = []
 
+
 # Function to generate new random points for map_objects
 def generate_map_objects():
     return [[random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)] for _ in range(10)]
 
+
 # Generate ten points in the map with random positions using the random module
 map_objects = generate_map_objects()
+
 
 def restart_game():
     global my_position, tail_length, tail, map_objects
@@ -24,6 +27,7 @@ def restart_game():
     tail_length = 0
     tail = []
     map_objects = generate_map_objects()
+
 
 while True:
     # Draw the map
@@ -53,6 +57,10 @@ while True:
                     if map_object[POS_X] == coordinate_X and map_object[POS_Y] == coordinate_y:
                         map_objects.remove(map_object)
                         tail_length += 1
+
+                        # Generate a new random position for a new "*"
+                        new_map_object = [random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)]
+                        map_objects.append(new_map_object)
 
             print(" {} ".format(char_to_draw), end="")
         print("|")
@@ -94,5 +102,3 @@ while True:
         my_position = new_head_position
     # Clean the screen with os module
     os.system("cls")
-
-

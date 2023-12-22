@@ -84,7 +84,7 @@
       <workItem from="1702247542979" duration="1539000" />
       <workItem from="1702250345900" duration="86000" />
       <workItem from="1702250445870" duration="256000" />
-      <workItem from="1703268375165" duration="5072000" />
+      <workItem from="1703268375165" duration="5681000" />
     </task>
     <servers />
   </component>
@@ -95,6 +95,6 @@
     <SUITE FILE_PATH="coverage/Ejercicios_semana1$random.coverage" NAME="random Coverage Results" MODIFIED="1702250641049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ejercicios_semana1$pruebaNum.coverage" NAME="pruebaNum Coverage Results" MODIFIED="1702247882325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Ejercicios_semana1$PruebasPython.coverage" NAME="PruebasPython Coverage Results" MODIFIED="1702248288382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Ejercicios_semana1$maze.coverage" NAME="maze Coverage Results" MODIFIED="1703268745094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pokemon/maze" />
+    <SUITE FILE_PATH="coverage/Ejercicios_semana1$maze.coverage" NAME="maze Coverage Results" MODIFIED="1703276124111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pokemon/maze" />
   </component>
 </project>
